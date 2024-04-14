@@ -14,4 +14,4 @@ RUN playwright install chromium
 
 RUN playwright install-deps
 
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=7860"]
+CMD ["gunicorn", "app:app"]
